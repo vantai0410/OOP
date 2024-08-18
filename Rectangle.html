@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh chu nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    class Rectangle{
+        constructor(width,length) {
+            this.width = width;
+            this.length = length;
+        }
+        getArea(){
+            return this.width * this.length;
+    }
+        getCircumference(){
+            return (this.width + this.length) * 2;
+        }
+        draw(ctx, x, y) {
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(x, y, this.width, this.length);
+        }
+    }
+    let myRect = new Rectangle(100,200);
+    alert("Area: " + myRect.getArea() +"\n" + "Perimeter: " + myRect.getCircumference());
+    let ctx = canvas.getContext("2d");
+    rect.draw(ctx, 50, 50);
+    function changeRetangle(){
+        myRect.width = +prompt("Enter new width: ");
+        myRect.length = +prompt("Enter new length: ");
+    }
+
+</script>
+</body>
+</html>

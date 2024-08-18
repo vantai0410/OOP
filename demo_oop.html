@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lập trình hướng đối tượng</title>
+</head>
+<body>
+<script>
+    /* có 3 cách để khai báo lớp:
+    c1:sử dụng các singleton class
+    c2: sử dụng function tạo class
+    c3: từ khoá class trong ES6 để khai báo class
+
+     */
+   //c1
+   //  let dog = {
+   //      // thuộc tính : giá trị của thuôộc tính
+   //      name: "kiki",
+   //      age : 2,
+   //      hairColor: "white",
+   //      say(){
+   //          console.log("gau gau")
+   //      }
+   //  }
+   //  console.log(dog.name);
+   //  console.log(dog.say());
+
+
+    //c3
+    // tạo 1 class học viên có các thuộc tính
+
+    /* constructor: hàm khởi tạo:
+    là hàm dc sử dụng để tạo ra các đối tượng từ class. và constructor thường chứa thuộc tính của class, mỗi class chỉ tồn tại 1 constructor duy nhất
+
+    từ khoá this giúp chtrinh hiểu dc lập trình viên muốn trỏ đến thuộc tính or hành vi của lớp hiện tại
+     */
+    // đối tượng là student, thuộc tính là name, age
+    class Student {
+        constructor(name,age,email) {
+            this.name = name;
+            this.age = age;
+            this.email = email;
+        }
+        //hành vi
+        showInformation(){
+            return "ten" +this.name +"tuổi" +this.age + "email" + this.email;
+        }
+        learn(subject){
+            console.log("dang hoc mon " + subject);
+        }
+    }
+    let student = new Student("Văn Tài",18,"abc.com");
+    console.log(student);
+    // muốn lấy thuộc tính nào thì trỏ tới đẻ lấy
+
+</script>
+</body>
+</html>

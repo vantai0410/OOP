@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        getRadius(radius){
+            radius = prompt("nhap")
+            return radius;
+        }
+        getArea(){
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let myCircle = new Circle();
+    console.log(myCircle.radius);
+    console.log("Bán kính của hình tròn:", myCircle.getRadius());
+    console.log("Diện tích của hình tròn:", myCircle.getArea());
+    console.log("Màu sắc của hình tròn:", myCircle.color);
+</script>
+</body>
+</html>
